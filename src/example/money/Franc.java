@@ -5,8 +5,7 @@ package example.money;
  * @date 2020/06/25
  */
 
-public class Franc {
-    private int amount;
+public class Franc extends Money{
 
     Franc(int amount) {
         this.amount = amount;
@@ -14,10 +13,5 @@ public class Franc {
 
     Franc times(int multiplier) {
         return new Franc(amount * multiplier);
-    }
-
-    public boolean equals(Object o) {
-        Franc franc = (Franc)o;
-        return this.amount == franc.amount;
     }
 }

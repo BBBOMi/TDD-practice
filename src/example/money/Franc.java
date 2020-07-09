@@ -5,7 +5,7 @@ package example.money;
  * @date 2020/06/25
  */
 
-public class Franc extends Money{
+public class Franc extends Money {
 
     Franc(int amount) {
         this.amount = amount;
@@ -13,5 +13,9 @@ public class Franc extends Money{
 
     Money times(int multiplier) {
         return new Franc(amount * multiplier);
+    }
+
+    String currency() {
+        return "CHF";
     }
 }

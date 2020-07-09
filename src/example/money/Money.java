@@ -5,8 +5,10 @@ package example.money;
  * @date 2020/06/25
  */
 
-public class Money {
+abstract public class Money {
     protected int amount;
+
+    abstract Money times(int multiplier);
 
     static Dollar dollar(int amount) {
         return new Dollar(amount);

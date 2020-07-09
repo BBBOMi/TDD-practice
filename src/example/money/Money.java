@@ -10,7 +10,7 @@ abstract public class Money {
 
     abstract Money times(int multiplier);
 
-    static Dollar dollar(int amount) {
+    static Money dollar(int amount) {
         return new Dollar(amount);
     }
 

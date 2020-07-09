@@ -7,10 +7,9 @@ package example.money;
 
 abstract public class Money {
     protected int amount;
+    protected String currency;
 
     abstract Money times(int multiplier);
-
-    abstract String currency();
 
     static Money dollar(int amount) {
         return new Dollar(amount);
@@ -18,6 +17,10 @@ abstract public class Money {
 
     static Money franc(int amount) {
         return new Franc(amount);
+    }
+
+    String currency() {
+        return currency;
     }
 
     @Override

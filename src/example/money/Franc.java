@@ -5,13 +5,14 @@ package example.money;
  * @date 2020/06/25
  */
 
-public class Franc extends Money{
+public class Franc extends Money {
+    private String currency;
 
-    Franc(int amount) {
-        this.amount = amount;
+    Franc(int amount, String currency) {
+        super(amount, currency);
     }
 
     Money times(int multiplier) {
-        return new Franc(amount * multiplier);
+        return Money.franc(amount * multiplier);
     }
 }

@@ -5,11 +5,13 @@ package example.money;
  * @date 2020/06/25
  */
 
-abstract public class Money {
+public class Money {
     protected int amount;
     protected String currency;
 
-    abstract Money times(int multiplier);
+    Money times(int multiplier) {
+        return new Money(amount * multiplier, currency);
+    }
 
     Money(int amount, String currency) {
         this.amount = amount;
@@ -32,6 +34,10 @@ abstract public class Money {
     public boolean equals(Object object) {
         Money money = (Money) object;
         return this.amount == money.amount
-                && getClass().equals(money.getClass());
+                && currency().equals(money.currency());
+    }
+
+    public String toString() {
+        return amount + " " + currency;
     }
 }

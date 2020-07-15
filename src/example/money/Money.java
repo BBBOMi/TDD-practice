@@ -5,11 +5,13 @@ package example.money;
  * @date 2020/06/25
  */
 
-abstract public class Money {
+public class Money {
     protected int amount;
     protected String currency;
 
-    abstract Money times(int multiplier);
+    Money times(int multiplier) {
+        return null;
+    }
 
     Money(int amount, String currency) {
         this.amount = amount;

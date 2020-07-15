@@ -36,4 +36,8 @@ public class Money {
         return this.amount == money.amount
                 && getClass().equals(money.getClass());
     }
+
+    public String toString() {
+        return amount + " " + currency;
+    }
 }

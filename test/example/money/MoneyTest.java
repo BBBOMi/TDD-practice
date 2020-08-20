@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
  * @date 2020/06/23
  */
 
-public class DollarTest {
+public class MoneyTest {
 
     @Test
     public void testDollarMultiplication() {

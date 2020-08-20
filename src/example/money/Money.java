@@ -30,6 +30,10 @@ public class Money {
         return currency;
     }
 
+    Money plus(Money added) {
+        return new Money(amount + added.amount, currency);
+    }
+
     @Override
     public boolean equals(Object object) {
         Money money = (Money) object;

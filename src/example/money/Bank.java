@@ -1,11 +1,15 @@
 package example.money;
 
+import java.util.HashMap;
+
 /**
  * @author Bomi
  * @date 2020/08/20
  */
 
 public class Bank {
+    private HashMap<Pair, Integer> rates = new HashMap();
+
     Money reduce(Expression source, String to) {
         return source.reduce(this, to);
     }
